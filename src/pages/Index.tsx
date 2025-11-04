@@ -13,7 +13,15 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground">
       <Navigation onConnectWallet={() => setIsWalletModalOpen(true)} />
       <HeroSection />
-      <NFTShowcase />
+      <section id="game" className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-4 glow-text">Game Coming Soon</h2>
+          <p className="text-muted-foreground">Epic space battles await!</p>
+        </div>
+      </section>
+      <section id="marketplace">
+        <NFTShowcase />
+      </section>
       <Leaderboard />
       <Footer />
       <WalletModal
