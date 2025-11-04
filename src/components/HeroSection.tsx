@@ -5,13 +5,17 @@ import spaceHero from "@/assets/space-hero.jpg";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Video Background Placeholder - Will be replaced with actual video */}
+      {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={spaceHero}
-          alt="Space Background"
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
           className="w-full h-full object-cover"
-        />
+        >
+          <source src="https://cdn.pixabay.com/video/2023/04/29/159829-822871283_large.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/50 to-background"></div>
       </div>
 
@@ -32,7 +36,7 @@ const HeroSection = () => {
         </div>
 
         <h1 className="text-5xl md:text-7xl font-bold mb-6 glow-text">
-          HEDERA NEXUS
+          HEDRASPACE
         </h1>
 
         <p className="text-xl md:text-2xl text-foreground/80 mb-4 max-w-3xl mx-auto">
@@ -46,20 +50,24 @@ const HeroSection = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-          <Button
-            size="lg"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold uppercase tracking-wider text-lg px-8 py-6 glow-border"
-          >
-            <Rocket className="mr-2 h-5 w-5" />
-            Launch Game
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="glass-panel border-primary/30 hover:border-primary/60 font-bold uppercase tracking-wider text-lg px-8 py-6"
-          >
-            Explore Marketplace
-          </Button>
+          <a href="#game">
+            <Button
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold uppercase tracking-wider text-lg px-8 py-6 glow-border"
+            >
+              <Rocket className="mr-2 h-5 w-5" />
+              Launch Game
+            </Button>
+          </a>
+          <a href="#marketplace">
+            <Button
+              size="lg"
+              variant="outline"
+              className="glass-panel border-primary/30 hover:border-primary/60 font-bold uppercase tracking-wider text-lg px-8 py-6 text-foreground"
+            >
+              Explore Marketplace
+            </Button>
+          </a>
         </div>
 
         {/* Feature Cards */}
